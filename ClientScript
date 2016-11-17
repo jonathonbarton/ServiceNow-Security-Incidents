@@ -1,0 +1,17 @@
+function onChange(control, oldValue, newValue, isLoading, isTemplate)  
+{  
+  if (isLoading || newValue == '') {  
+  return;  
+  }  
+  
+  //Type appropriate comment here, and begin script below  
+  var checkbox = g_form.getValue('u_security_vulnerability'); //the Checkbox is named security_vulnerability 
+  if(checkbox == 'true')  //If it's checked...
+  {  
+  g_form.setSectionDisplay('vulnerability', true); //...show the form section  
+  }  
+  else  //otherwise...
+  {  
+  g_form.setSectionDisplay('vulnerability', false);  //...don't show the form section
+  }  
+} 
